@@ -1,12 +1,11 @@
 import { useState, useEffect } from "react";
 import User from "../User/User";
-import "../../../public/user.json";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
   console.log(users);
   useEffect(() => {
-    fetch("/public/user.json")
+    fetch("https://ahadsaim9.github.io/task-seo-p1/data.json")
       .then((res) => res.json())
       .then((data) => setUsers(data));
   }, []);
